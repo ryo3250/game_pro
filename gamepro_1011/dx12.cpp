@@ -24,7 +24,7 @@ IDXGIFactory4* dx12::CreateDXGIFactory()
 	
 }
 
-IDXGIAdapter* dx12::GetHardwareAdapter(IDXGIFactory4* factory)
+IDXGIAdapter1* dx12::GetHardwareAdapter(IDXGIFactory4* factory)
 {
     IDXGIAdapter1* adapter;
 

@@ -48,6 +48,8 @@ int WINAPI WinMain(
 
     ShowWindow(hwnd, nCmdShow); // ウィンドウを表示
 
+    dx12 a;
+
     // 3. メッセージループ
     bool nextFrame = true;
 
