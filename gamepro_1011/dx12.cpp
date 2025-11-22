@@ -1,5 +1,6 @@
 #include "dx12.h"
 
+#pragma comment(lib, "d3d12.lib")
 #pragma comment(lib, "dxgi.lib")
 
 IDXGIFactory4* dx12::CreateDXGIFactory() 
