@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "dx12.h"
+#include "device.h"
 
 class DescriptorHeap final 
 {
@@ -10,7 +10,7 @@ public:
 
 	~DescriptorHeap();
 
-	[[nodiscard]] bool create(const dx12& device, D3D12_DESCRIPTOR_HEAP_TYPE type, UINT numDescriptors, bool shaderVisible = false) noexcept;
+	[[nodiscard]] bool create(const device& device, D3D12_DESCRIPTOR_HEAP_TYPE type, UINT numDescriptors, bool shaderVisible = false) noexcept;
 
 	[[nodiscard]] ID3D12DescriptorHeap* get() const noexcept;
 

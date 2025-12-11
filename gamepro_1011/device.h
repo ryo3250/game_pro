@@ -1,6 +1,6 @@
 #pragma once
 
-#include"dx12.h"
+#include"DXGI.h"
 #include<d3d12.h>
 
 class device final
@@ -11,7 +11,7 @@ public:
 
 	~device();
 
-	[[nodiscard]] bool create(const dx12& dxgi) noexcept;
+	[[nodiscard]] bool create(const DXGI& dxgi) noexcept;
 
 	[[nodiscrad]] ID3D12Device* get() const noexcept;
 
