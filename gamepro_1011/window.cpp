@@ -14,7 +14,7 @@ namespace
 	}
 }
 
-[[nodiscard]] HRESULT window::create(HINSTANCE instance, int Width, int height, std::string_view name)noexcept
+[[nodiscard]] HRESULT window::create(HINSTANCE instance, int width, int height, std::string_view name)noexcept
 {
 	WNDCLASS wc{};
 	wc.lpfnWndProc   = WindowProc;
@@ -26,7 +26,7 @@ namespace
 	RegisterClass(&wc);
 
 	handle_ = CreateWindow(wc.lpszClassName, wc.lpszClassName,
-						   WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, Width, height,
+						   WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, width, height,
 						   nullptr, nullptr, instance, nullptr);
 	if (!handle_) 
 	{
@@ -37,8 +37,33 @@ namespace
 
 	UpdateWindow(handle_);
 
-	witdh_ = witdh;
+	witdh_ = width;
 	height_ = height;
 
 	return S_OK;
+}
+
+[[nodiscard]] bool window::messageLoop() const noexcept
+{
+	MSG msg{};
+	while(PeekMessage(&msg,nullptr, 0,0,PM_REMOVE))
+	{
+		if (msg.message == WM_QUIT) 
+		{
+			TranslateMessage(&msg);
+			DispatchMessage(&msg);
+		}
+	}
+
+	return true;
+}
+
+[[nodiscard]] HWND window::handle() const noexcept 
+{
+	return handle_;
+}
+
+[[nodiscard]] std::pair<int, int> window::size() const noexcept 
+{
+	return { witdh_, height_ };
 }
