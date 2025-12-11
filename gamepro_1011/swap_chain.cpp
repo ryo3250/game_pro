@@ -32,7 +32,9 @@ swap_chain::~swap_chain()
 			assert(false && "スワップチェーンの作成に失敗しました");
 			return false;
 		}
+	}
 
+	{
 		const auto hr = tempSwapChain->QueryInterface(IID_PPV_ARGS(&swapChain_));
 		tempSwapChain->Release();
 

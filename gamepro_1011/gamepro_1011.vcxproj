@@ -135,6 +135,7 @@
     <ClCompile Include="device.cpp" />
     <ClCompile Include="DXGI.cpp" />
     <ClCompile Include="fence.cpp" />
+    <ClCompile Include="pipline_state_object.cpp" />
     <ClCompile Include="RenderTarget.cpp" />
     <ClCompile Include="root_signature.cpp" />
     <ClCompile Include="shader.cpp" />
@@ -149,6 +150,7 @@
     <ClInclude Include="device.h" />
     <ClInclude Include="DXGI.h" />
     <ClInclude Include="fence.h" />
+    <ClInclude Include="pipline_state_object.h" />
     <ClInclude Include="RenderTarget.h" />
     <ClInclude Include="root_signature.h" />
     <ClInclude Include="shader.h" />

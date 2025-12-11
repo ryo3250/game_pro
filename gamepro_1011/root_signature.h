@@ -3,6 +3,7 @@
 #include"device.h"
 class root_signature final
 {
+public:
 	root_signature() = default;
 
 	~root_signature();
