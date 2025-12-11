@@ -11,7 +11,7 @@ public:
 
 	~window() = default;
 
-	[[nodiscard]] HRESULT create(HINSTANCE instancem, int Width, int height, std::string_view name)noexcept;
+	[[nodiscard]] HRESULT create(HINSTANCE instancem, int width, int height, std::string_view name)noexcept;
 
 	[[nodiscard]] bool messageLoop() const noexcept;
 
