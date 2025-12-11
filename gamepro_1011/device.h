@@ -13,7 +13,7 @@ public:
 
 	[[nodiscard]] bool create(const DXGI& dxgi) noexcept;
 
-	[[nodiscrad]] ID3D12Device* get() const noexcept;
+	[[nodiscard]] ID3D12Device* get() const noexcept;
 
 private:
 	ID3D12Device* device_;
