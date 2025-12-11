@@ -19,6 +19,6 @@ public:
 	[[nodiscard]] ID3D12Resource* get(uint32_t index) const noexcept;
 
 private:
-	std::vector<ID3D12Resource*> renderTragets_;
+	std::vector<ID3D12Resource*> renderTargets_;
 };
 
