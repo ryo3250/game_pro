@@ -2,7 +2,7 @@
 #include "DescriptorHeap.h"
 #include <cassert>
 
-DescriptoHeap :: ~DescriptorHeap() 
+DescriptorHeap :: ~DescriptorHeap() 
 {
 	if (heap_) 
 	{
