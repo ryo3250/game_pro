@@ -13,7 +13,7 @@ public:
 
 	[[nodiscard]] IDXGIFactory4* factory() const noexcept;
 
-	[[nodiscard]] IDXGIAdapter1* sisplayAdapter() const noexcept;
+	[[nodiscard]] IDXGIAdapter1* displayAdapter() const noexcept;
 
 private:
 	IDXGIFactory4* dxgiFactory_{};
