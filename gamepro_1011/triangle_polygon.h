@@ -10,7 +10,7 @@ public:
 
 	~triangle_polygon();
 
-	[[nodiscard]] bool cerate(const device& device) noexcept;
+	[[nodiscard]] bool create(const device& device) noexcept;
 
 	[[nodiscard]] void draw(const command_list& commandList)noexcept;
 

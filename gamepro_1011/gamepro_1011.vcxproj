@@ -134,6 +134,7 @@
     <ClCompile Include="DescriptorHeap.cpp" />
     <ClCompile Include="device.cpp" />
     <ClCompile Include="DXGI.cpp" />
+    <ClCompile Include="entry.cpp" />
     <ClCompile Include="fence.cpp" />
     <ClCompile Include="pipline_state_object.cpp" />
     <ClCompile Include="RenderTarget.cpp" />

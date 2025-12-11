@@ -26,7 +26,7 @@ triangle_polygon::~triangle_polygon()
 	}
 }
 
-[[nodiscard]] bool triangle_polygon::cerate(const device& device) noexcept 
+[[nodiscard]] bool triangle_polygon::create(const device& device) noexcept 
 {
 	if (!createVertexBuffer(device)) 
 	{
