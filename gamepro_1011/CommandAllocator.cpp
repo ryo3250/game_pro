@@ -11,13 +11,14 @@ CommandAllocator::~CommandAllocator()
 }
 [[nodiscard]] bool CommandAllocator::create(const device& device, D3D12_COMMAND_LIST_TYPE type) noexcept
 {
-	HRESULT hr = device.get()->CreateCommandAllocator(type, IID_PPV_ARGS(&commandAllocator_));
+	type_ = type;
+
+	HRESULT hr = device.get()->CreateCommandAllocator(type_, IID_PPV_ARGS(&commandAllocator_));
 	if (FAILED(hr))
 	{
 		assert(false && "コマンドアロケーターの作成に失敗しました");
 		return false;
 	}
-	type_ = type;
 	return true;
 }
 
