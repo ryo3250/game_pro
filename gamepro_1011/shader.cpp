@@ -21,11 +21,11 @@ shader::~shader()
 
 [[nodiscard]] bool shader::create(const device& device) noexcept
 {
-	const std::string filePath = "asset/shader.hlsl";
+	const std::string filePath = "shader.hlsl";
 	const std::wstring temp = std::wstring(filePath.begin(), filePath.end());
 	ID3DBlob* error{};
 
-	auto res = D3DCompileFromFile(temp.c_str(),nullptr, nullptr,"vs", "vs_5_0",D3DCOMPILE_DEBUG |D3DCOMPILE_SKIP_OPTIMIZATION ,0, &vertexShader_, &error);
+	auto res = D3DCompileFromFile(temp.data(),nullptr, nullptr,"vs", "vs_5_0",D3DCOMPILE_DEBUG |D3DCOMPILE_SKIP_OPTIMIZATION ,0, &vertexShader_, &error);
 	if (FAILED(res))
 	{
 		char* p = static_cast<char*>(error->GetBufferPointer());

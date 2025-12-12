@@ -37,7 +37,7 @@ triangle_polygon::~triangle_polygon()
 	{
 		return false;
 	}
-	return false;
+	return true;
 }
 
 [[nodiscard]] bool triangle_polygon::createVertexBuffer(const device& device)noexcept
@@ -46,7 +46,7 @@ triangle_polygon::~triangle_polygon()
 	{
 		{  {0.0f, 0.5f, 0.0f}, {1.0f, 0.0f, 0.0f, 1.0f}},
 		{ {0.5f, -0.5f, 0.0f}, {0.0f, 1.0f, 0.0f, 1.0f}},
-		{{-0.5f, -0.5f, 0.0f}, {0.0f, 0.0f, 0.0f, 1.0f}}
+		{{-0.5f, -0.5f, 0.0f}, {0.0f, 0.0f, 1.0f, 1.0f}}
 	};
 
 	const auto vertexBufferSize = sizeof(trangleVertices);
@@ -75,7 +75,7 @@ triangle_polygon::~triangle_polygon()
 		&heapProperty,
 		D3D12_HEAP_FLAG_NONE,
 		&resourceDesc,
-		D3D12_RESOURCE_STATE_DEPTH_READ,
+		D3D12_RESOURCE_STATE_GENERIC_READ,
 		nullptr,
 		IID_PPV_ARGS(&vertexBuffer_));
 	if (FAILED(res)) 
@@ -137,7 +137,7 @@ triangle_polygon::~triangle_polygon()
 		&heapProperty,
 		D3D12_HEAP_FLAG_NONE,
 		&resourceDesc,
-		D3D12_RESOURCE_STATE_DEPTH_READ,
+		D3D12_RESOURCE_STATE_GENERIC_READ,
 		nullptr,
 		IID_PPV_ARGS(&indexBuffer_));
 	if (FAILED(res)) 

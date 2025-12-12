@@ -18,7 +18,7 @@ DescriptorHeap :: ~DescriptorHeap()
 	HeapDesc.Type = type;
 	HeapDesc.Flags = shaderVisible ? D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE : D3D12_DESCRIPTOR_HEAP_FLAG_NONE;
 
-	type = type;
+	type_ = type;
 
 	HRESULT hr = device.get()->CreateDescriptorHeap(&HeapDesc, IID_PPV_ARGS(&heap_));
 	if (FAILED(hr))
