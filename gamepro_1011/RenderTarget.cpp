@@ -14,7 +14,7 @@ RenderTarget::~RenderTarget()
 	renderTargets_.clear();
 }
 
-[[nodiscard]] bool RenderTarget::createBackBuffer(const device& device, const swap_chain& swapChain, DescriptorHeap& heap) noexcept 
+[[nodiscard]] bool RenderTarget::createBackBuffer(const device& device, const swap_chain& swapChain, const DescriptorHeap& heap) noexcept 
 {
 	const auto& desc = swapChain.getDesc();
 

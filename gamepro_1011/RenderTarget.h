@@ -5,14 +5,14 @@
 #include"DescriptorHeap.h"
 #include<vector>
 
-class RenderTarget
+class RenderTarget final
 {
 public:
 	RenderTarget() = default;
 
 	~RenderTarget();
 
-	[[nodiscard]] bool createBackBuffer(const device& device, const swap_chain& swapChain, DescriptorHeap& heap) noexcept;
+	[[nodiscard]] bool createBackBuffer(const device& device, const swap_chain& swapChain,const DescriptorHeap& heap) noexcept;
 
 	[[nodiscard]] D3D12_CPU_DESCRIPTOR_HANDLE getDescriptorHandle(const device& device, const DescriptorHeap& heap, UINT index) const noexcept;
 

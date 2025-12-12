@@ -31,7 +31,7 @@ DescriptorHeap :: ~DescriptorHeap()
 
 [[nodiscard]] ID3D12DescriptorHeap* DescriptorHeap::get() const noexcept
 {
-	if (heap_) 
+	if (!heap_) 
 	{
 		assert(false && "デスクリプタヒープが未作成です");
 	}
