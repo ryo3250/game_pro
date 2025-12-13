@@ -132,6 +132,7 @@
     <ClCompile Include="CommandAllocator.cpp" />
     <ClCompile Include="command_list.cpp" />
     <ClCompile Include="command_queue.cpp" />
+    <ClCompile Include="constant_buffer.cpp" />
     <ClCompile Include="DescriptorHeap.cpp" />
     <ClCompile Include="device.cpp" />
     <ClCompile Include="DXGI.cpp" />
@@ -149,6 +150,7 @@
     <ClInclude Include="CommandAllocator.h" />
     <ClInclude Include="command_list.h" />
     <ClInclude Include="command_queue.h" />
+    <ClInclude Include="constant_buffer.h" />
     <ClInclude Include="DescriptorHeap.h" />
     <ClInclude Include="device.h" />
     <ClInclude Include="DXGI.h" />
